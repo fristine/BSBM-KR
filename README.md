@@ -1,6 +1,8 @@
 BSBM 한국어 변역
 translation by the.zeroth_(discord)
 
+Original by SB
+
 # BRAWL-STARS-V11-BRAWLER-MAKER-TOOL
 Answer some questions and get your brawler csvs ready!
 # HOW TO RUN
