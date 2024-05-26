@@ -1,3 +1,6 @@
+BSBM 한국어 변역
+translation by the.zeroth_(discord)
+
 # BRAWL-STARS-V11-BRAWLER-MAKER-TOOL
 Answer some questions and get your brawler csvs ready!
 # HOW TO RUN
@@ -22,7 +25,3 @@ Run main.py and answer the followed questions, and after questions are done, you
 - support creating more than 1 brawler
 # AUTHORS
 S.B#9838
-# LINKS
-- [Join my discord server](https://discord.gg/b2ejYcJjqA)
-# STAR
-Give star 🌟 for this repo :p
