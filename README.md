@@ -1,5 +1,5 @@
 BSBM 한국어 변역
-translation by the.zeroth_(discord)
+KOREAN translation by the.zeroth_(discord)
 
 Original by SB
 
