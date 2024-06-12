@@ -41,7 +41,7 @@ def main():
 			shutil.copyfile(f"{dir}/replacor/{file}", f"{dir}/csvs/{file}")
 			print(f"{c.g}[TOOL] 성공적으로 완료하였습니다. {file.upper()}{c.w}")
 		time.sleep(0.5)
-		print(f"{c.c}[TOOL] DONE!{c.w}")
+		print(f"{c.c}[TOOL] 완료!{c.w}")
 		time.sleep(0.5)
 		print(f"{c.r}[TOOL] 콘솔 초기화중...{c.w}")
 		time.sleep(2)
