@@ -167,6 +167,9 @@ def main():
 			ulti_grow = "true"
 		else:
 			ulti_grow = ""
+		print(f"{c.y}[TOOL] 특수공격 에딧을 마쳤습니다!\n 스타파워 에딧을 시작하는 중...{c.w}")
+		time.sleep(1)
+		brawler_star_power = input(f"{c.c}ULTI CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 특수공격처럼, true or false): {c.w}")
 		print(f"{c.y}[TOOL] texts.csv수정하는 중...{c.w}")
 		time.sleep(1)
 		texts_file = open("csvs/texts.csv", "a")
@@ -199,11 +202,11 @@ def main():
 		print(f"{c.y}[TOOL] cards.csv를 수정하는 중...{c.w}")
 		time.sleep(1)
 		cards_file = open("csvs/cards.csv", "a")
-		brawler_card = f"{brawlername.replace(' ', '_')}"
+		brawler_card = f"{brawler_star_power.replace(' ', '_')}"
 		cards_file.write(f'\n"{brawler_card}_unlock","sc/ui.sc",,"{brawler_card}",0,,"unlock",,,,"{brawler_rarity}",,,,,,21')
 		cards_file.write(f'\n"{brawler_card}_hp","sc/ui.sc","health_icon","{brawler_card}",1,,"hp",,,,"common","TID_ARMOR","TID_ARMOR_STAT",,"genicon_health",,')
-		cards_file.write(f'\n"{brawler_card}_abi","sc/ui.sc","attack_icon","{brawler_card}",2,,"skill","{brawlername.replace(" ", "_")}Weapon",,,"common","TID_{brawler_atk_name_rep}","TID_STAT_DAMAGE_PER_SHOT",,"genicon_damage",,')
-		cards_file.write(f'\n"{brawler_card}_ulti","sc/ui.sc","ulti_icon","{brawler_card}",3,,"skill","{brawlername.replace(" ", "_")}Ulti",,,"common","TID_{brawler_ulti_name_rep}","TID_STAT_DAMAGE_PER_SHOT",,"genicon_damage",,')
+		cards_file.write(f'\n"{brawler_card}_abi","sc/ui.sc","attack_icon","{brawler_card}",2,,"skill","{brawler_star_power.replace(" ", "_")}Weapon",,,"common","TID_{brawler_atk_name_rep}","TID_STAT_DAMAGE_PER_SHOT",,"genicon_damage",,')
+		cards_file.write(f'\n"{brawler_card}_ulti","sc/ui.sc","ulti_icon","{brawler_card}",3,,"skill","{brawler_star_power.replace(" ", "_")}Ulti",,,"common","TID_{brawler_ulti_name_rep}","TID_STAT_DAMAGE_PER_SHOT",,"genicon_damage",,')
 		cards_file.write(f"\n{brawler_card}_unique,sc/ui.sc,icon_eiuD,{brawler_card},4,,freeze,,50,350,common,TID_SPEC_ABI_FREEZE,,,genicon_health")
 		cards_file.flush()
 		cards_file.close()
