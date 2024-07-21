@@ -10,7 +10,7 @@ def main():
 	printer("=")
 	print()
 	print(c.y+f"브롤스타즈 v11 브롤러 메이커!".center(width))
-	print(c.y+f"원본 제작자 ORIGINAL MADE BY s.b[discord] |||| 한국어 번역 KOREAN TRANSLATION BY zero.sans_[discord]".center(width))
+	print(c.y+f"원본 제작자 ORIGINAL MADE BY s.b[discord] |||| 한국어 번역 KOREAN TRANSLATION BY bsfristine_[discord]".center(width))
 	print()
 	printer("=")
 	print()
