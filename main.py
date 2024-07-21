@@ -24,11 +24,13 @@ def main():
 	printer("=")
 	print()
 	start_question = input(f"{c.b}선택: {c.w}")
+	
 	if start_question != "0" and start_question != "1" and start_question != "2":
 		print(f"{c.r}잘못된 값{c.w}")
 		time.sleep(0.5)
 		clear()
 		main()
+		
 	elif start_question == "0":
 		dir = os.getcwd()
 		print(f"{c.c}[TOOL] 예전 csv파일을 삭제하는 중...{c.w}")
@@ -38,6 +40,7 @@ def main():
 		os.mkdir("csvs")
 		time.sleep(0.5)
 		print(f"{c.c}[TOOL] 새로운 csv파일을 옮기는 중...")
+		
 		for file in os.listdir("replacor"):
 			time.sleep(0.5)
 			shutil.copyfile(f"{dir}/replacor/{file}", f"{dir}/csvs/{file}")
@@ -49,6 +52,7 @@ def main():
 		time.sleep(2)
 		clear()
 		main()
+		
 	elif start_question == "1":
 		print(f"{c.y}[TOOL] 먼저, 기본 에딧을 시작합니다{c.w}")
 		time.sleep(1)
@@ -68,15 +72,20 @@ def main():
 		time.sleep(1)
 		atk_damage = input(f"{c.c}공격 데미지: {c.w}")
 		canmoveatk = input(f"{c.c}공격 도중 움직임 여부 (true or fase): {c.w}")
+		
 		if canmoveatk.lower() == "true":
 			can_move_atk = "true"
+			
 		elif canmoveatk.lower() != "true":
 			can_move_atk = ""
 		canatkshoot = input(f"{c.c}오토샷 가능 여부 (true or false): {c.w}")
+		
 		if canatkshoot == "true":
 			can_atk_shoot = "true"
+			
 		else:
 			can_atk_shoot = ""
+			
 		atk_range = input(f"{c.c}공격 사정거리: {c.w}")
 		atk_rec = input(f"{c.c}재장전 시간 (in ms): {c.w}")
 		atk_bullets = input(f"{c.c}공격 당 탄 개수: {c.w}")
@@ -87,20 +96,26 @@ def main():
 		atk_proj_speed = input(f"{c.c}피사체 속도: {c.w}")
 		atk_proj_scale = input(f"{c.c}피사체 크기: {c.w}")
 		atkbounce = input(f"{c.c}공격이 바운스 되는 정도 (true or false): {c.w}")
+		
 		if atkbounce == "true":
 			atk_bounce = "true"
 			atk_bounce_dist = input(f"{c.c}바운싱 후에 추가 공격 거리: {c.w}")
+			
 		else:
 			atk_bounce = ""
 			atk_bounce_dist = ""
 		atkpass = input(f"{c.c}피사체가 적을 뚫고 지나가는 여부 (true or false): {c.w}")
+		
 		if atkpass == "true":
 			atk_pass = "true"
+			
 		else:
 			atk_pass = ""
 		atkdestroy = input(f"{c.c}벽 파괴 가능 여부 (true or false): {c.w}")
+		
 		if atkdestroy == "true":
 			atk_destroy = "true"
+			
 		else:
 			atk_destroy = ""
 		atk_push = input(f"{c.c}특수공격으로 인해 밀쳐지는 힘의 정도 (Enter로 스킵): {c.w}")
@@ -108,29 +123,39 @@ def main():
 		atk_stun = input(f"{c.c}공격이 적을 스턴걸리게 하는 힘의 정도 (Enter로 스킵): {c.w}")
 		atk_life = input(f"{c.c}공격 당 체력을 흡수하는 정도 (% 당, Enter로 스킵): {c.w}")
 		atkpassenv = input(f"{c.c}공격이 벽을 뚫는 여부 (true or false): {c.w}")
+		
 		if atkpassenv == "true":
 			atk_pass_env = "true"
+			
 		else:
 			atk_pass_env = ""
 		atk_poison = input(f"{c.c}공격 당 독 데미지 IN % (Enter로 스킵): {c.w}")
 		atkgrow = input(f"{c.c}ATTACK CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 처럼, true or false): {c.w}")
+		
 		if atkgrow == "true":
 			atk_grow = "true"
+			
 		else:
 			atk_grow = ""
 		print(f"{c.y}[TOOL] 피사체 에딧을 마쳤습니다!\n특수공격 에딧을 시작하는 중...{c.w}")
+		
 		time.sleep(1)
 		ulti_damage = input(f"{c.c}특수 공격 데미지: {c.w}")
 		canmoveulti = input(f"{c.c}특수공격 도중 움직임 가능 여부(true or fase): {c.w}")
+		
 		if canmoveulti.lower() == "true":
 			can_move_ulti = "true"
+			
 		elif canmoveulti.lower() != "true":
 			can_move_ulti = ""
 		canultishoot = input(f"{c.c}특수공격 오토샷 가능 여부 (true or false): {c.w}")
+		
 		if canultishoot == "true":
 			can_ulti_shoot = "true"
+			
 		else:
 			can_ulti_shoot = ""
+			
 		ulti_range = input(f"{c.c}특수공격 거리: {c.w}")
 		ulti_bullets = input(f"{c.c}특수공격 당 탄의 갯수: {c.w}")
 		ulti_spread = input(f"{c.c}특수 공격이 퍼지는 거리: {c.w}")
@@ -140,20 +165,26 @@ def main():
 		ultibounce = input(f"{c.c}특수 공격 바운싱 여부 (true or false): {c.w}")
 		if ultibounce == "true":
 			ulti_bounce = "true"
+	  
 			ulti_bounce_dist = input(f"{c.c}바운싱 후 추가 특수공격 거리: {c.w}")
 		else:
 			ulti_bounce = ""
 			ulti_bounce_dist = ""
+			
 		ultipass = input(f"{c.c}특수공격이 적을 뚫는 여부 (true or false): {c.w}")
 		if ultipass == "true":
 			ulti_pass = "true"
+			
 		else:
 			ulti_pass = ""
 		ultidestroy = input(f"{c.c}특수공격 벽 파괴 가능 여부 (true or false): {c.w}")
+		
 		if ultidestroy == "true":
 			ulti_destroy = "true"
+			
 		else:
 			ulti_destroy = ""
+			
 		ulti_push = input(f"{c.c}특수공격으로 인해 밀쳐지는 거리 (Enter로 스킵): {c.w}")
 		ulti_freeze = input(f"{c.c}특수공격으로 인해 얼리게 되는 힘의 정도 (Enter로 스킵): {c.w}")
 		ulti_stun = input(f"{c.c}특수공격이 적을 스턴걸리게 하는 힘의 정도 (Enter로 스킵): {c.w}")
@@ -161,14 +192,18 @@ def main():
 		ultipassenv = input(f"{c.c}특수공격이 벽을 뚫을 수 있는 여부 (true or false): {c.w}")
 		if ultipassenv == "true":
 			ulti_pass_env = "true"
+			
 		else:
 			ulti_pass_env = ""
+			
 		ulti_poison = input(f"{c.c}특수공격 당 독 데미지 IN % (Enter로 스킵): {c.w}")
 		ultigrow = input(f"{c.c}ULTI CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 특수공격처럼, true or false): {c.w}")
 		if ultigrow == "true":
 			ulti_grow = "true"
+			
 		else:
 			ulti_grow = ""
+			
 		print(f"{c.y}[TOOL] 특수공격 에딧을 마쳤습니다!\n 스타파워 에딧을 시작하는 중...{c.w}")
 		time.sleep(1)
 		brawler_star_power = input(f"{c.c}ULTI CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 특수공격처럼, true or false): {c.w}")
@@ -225,6 +260,7 @@ def main():
 		proj_file.write(f"\n{brawler_skin}Projectile,{atk_proj_speed},sc/effects.sc,Bouncy_bullet_blue,Bouncy_bullet_red,projectile_shadow,,,,,,Gen_hit,Gen_hit,no_hit,0,,,,,0,2,0,{atk_proj_scale},,,,,,shotgun_trail_small,true,,{atk_bounce},{atk_bounce_dist},,{atk_pass},{atk_destroy},,{atk_push},,,,,,,,,{atk_freeze},{atk_stun},,,,{atk_life},{atk_pass_env},{atk_poison},,,{atk_grow},")
 		print(f"{c.y}[TOOL] projectiles.csv를 수정하는 중 (2/2)...{c.w}")
 		proj_file.write(f"\n{brawler_skin}UltiProjectile,{ulti_proj_speed},sc/effects.sc,Bouncy_bullet_blue,Bouncy_bullet_red,projectile_shadow,,,,,,Gen_hit,Gen_hit,no_hit,0,,,,,0,2,0,{ulti_proj_scale},,,,,,shotgun_trail_small,true,,{ulti_bounce},{ulti_bounce_dist},,{ulti_pass},{ulti_destroy},,{ulti_push},,,,,,,,,{ulti_freeze},{ulti_stun},,,,{ulti_life},{ulti_pass_env},{ulti_poison},,,{ulti_grow},")
+		
 	elif start_question == "2":
 		exit()
      
