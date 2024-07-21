@@ -5,7 +5,9 @@ import os
 import sys
 import time
 import shutil
+
 width = os.get_terminal_size().columns
+
 def main():
 	printer("=")
 	print()
