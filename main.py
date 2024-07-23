@@ -205,8 +205,9 @@ def main():
 			ulti_grow = ""
 			
 		print(f"{c.y}[TOOL] 특수공격 에딧을 마쳤습니다!\n 스타파워 에딧을 시작하는 중...{c.w}")
+
 		time.sleep(1)
-		brawler_star_power = input(f"{c.c}ULTI CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 특수공격처럼, true or false): {c.w}")
+		brawler_star_power = input(f"{c.c}적용하려는 스타파워를 가지고 있는 브롤러의 코드명을 입력하세요(ex: 쉘리 = ShotgunGirl): {c.w}")
 		print(f"{c.y}[TOOL] texts.csv수정하는 중...{c.w}")
 		time.sleep(1)
 		texts_file = open("csvs/texts.csv", "a")
