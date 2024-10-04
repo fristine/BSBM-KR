@@ -130,7 +130,7 @@ def main():
 		else:
 			atk_pass_env = ""
 		atk_poison = input(f"{c.c}공격 당 독 데미지 IN % (Enter로 스킵): {c.w}")
-		atkgrow = input(f"{c.c}ATTACK CAN GROW STRONGER[해석 못하겠음 ㅈㅅ] (파이퍼 처럼, true or false): {c.w}")
+		atkgrow = input(f"{c.c}거리에 따라 데미지가 달라짐 (파이퍼 처럼, true or false): {c.w}")
 		
 		if atkgrow == "true":
 			atk_grow = "true"
