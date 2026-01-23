@@ -12,11 +12,11 @@ def main():
 	printer("=")
 	print()
 	print(c.y+f"브롤스타즈 v11 브롤러 메이커!".center(width))
-	print(c.y+f"원본 제작자 ORIGINAL MADE BY s.b[discord] |||| 한국어 번역 KOREAN TRANSLATION BY bsnoneoverlth_[discord]".center(width))
+	print(c.y+f"원본 제작자 : s.b[discord] |||| 한국어 번역 bsnoneoverlth_[discord]".center(width))
 	print()
 	printer("=")
 	print()
-	print(f"{c.r} [NOTICE] 이 프로그램에서 사용하는 브롤 버전은 v29입니다! {c.r}".center(width))
+	print(f"{c.r} [주의] 이 프로그램에서 사용하는 브롤스타즈 버전은 v29입니다! {c.r}".center(width))
 	print(f"""{c.c}0 : csvs 초기화
 1 : 시작
 2 : 나가기{c.w}""")
